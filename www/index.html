@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#2196f3" />
+    <title>Princess Modas</title>
+
+    <!-- Framework7 CSS -->
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css" />
+
+    <!-- Ícones e estilo personalizado -->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="css/personalizado.css" />
+  </head>
+
+  <body>
+    <!-- APP ROOT -->
+    <div id="app">
+      <!-- VIEWS / TABS CONTAINER -->
+      <div class="views tabs safe-areas">
+
+        <!-- TABBAR (menu inferior) -->
+        <div class="toolbar tabbar toolbar-bottom">
+          <div class="toolbar-inner display-flex" >
+            <a href="/www/index.html" class="tab-link tab-link-active">
+              <i class="mdi mdi-home"></i>
+              <span>Link 1</span>
+            </a>
+            <a href="/www/link2.html" class="tab-link">
+              <i class="mdi mdi-link"></i>
+              <span>link 2</span>
+            </a>
+            <a href="/www/link3.html" class="tab-link">
+              <i class="mdi mdi-account"></i>
+              <span>link 3</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- VIEW HOME -->
+        <div id="view-home" class="view view-main tab tab-active">
+          <div class="page" data-name="home">
+            <div class="navbar">
+              <div class="navbar-bg"></div>
+              <div class="navbar-inner justify-content-center">
+                <div class="title">Início</div>
+              </div>
+            </div>
+            <div class="page-content">
+              <div class="block">
+                <p>Bem-vindo a <b>Princess Modas</b> 👑</p>
+                <p>Conteúdo da aba inicial.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIEW CATALOG -->
+        <div id="view-catalog" class="view tab">
+          <div class="page" data-name="catalog">
+            <div class="navbar">
+              <div class="navbar-bg"></div>
+              <div class="navbar-inner justify-content-center">
+                <div class="title">Catálogo</div>
+              </div>
+            </div>
+            <div class="page-content">
+              <div class="block">
+                <p>Listagem de produtos e promoções.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIEW SETTINGS -->
+        <div id="view-settings" class="view tab">
+          <div class="page" data-name="settings">
+            <div class="navbar">
+              <div class="navbar-bg"></div>
+              <div class="navbar-inner justify-content-center">
+                <div class="title">Configurações</div>
+              </div>
+            </div>
+            <div class="page-content">
+              <div class="block">
+                <p>Configurações e preferências do usuário.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Framework7 JS -->
+    <script src="lib/framework7-bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="lib/jquery-3.7.0.min.js"></script>
+    <!-- Arquivo de rotas -->
+    <script src="js/routes.js"></script>
+    <!-- Cordova -->
+    <script src="cordova.js"></script>
+
+    <!-- Inicialização do App -->
+    <script>
+      var app = new Framework7({
+        el: "#app",
+        name: "Princess Modas",
+        id: "com.princessmodas.app",
+      });
+    </script>
+  </body>
+</html>
