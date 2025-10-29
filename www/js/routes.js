@@ -30,6 +30,17 @@ var app = new Framework7({
         },
         pageInit: function (event, page) {
           // fazer algo quando a página for inicializada
+          $.getScript("js/index.js");
+
+          var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 7,
+            
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+          });
         },
         pageBeforeRemove: function (event, page) {
           // fazer algo antes da página ser removida do DOM

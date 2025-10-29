@@ -57,9 +57,7 @@ body {
   font-weight: bold;
   color: var(--gelo);
   transition: all 0.2s ease;
-   
 }
-
 
 .toolbar-inner .link:not(.active) {
   color: var(--color-dark-900);
@@ -68,16 +66,17 @@ body {
 
 .toolbar-inner > .link i {
   font-size: 28px;
- 
 }
 
- .ri-user-smile-line:active,.ri-hearts-line:active,.ri-home-smile-line:active,.ri-search-ai-line:active{
-    transform: scale(1.7);
-     color: var(--color-gradient-dark);
+.ri-user-smile-line:active,
+.ri-hearts-line:active,
+.ri-home-smile-line:active,
+.ri-search-ai-line:active {
+  transform: scale(1.7);
+  color: var(--color-gradient-dark);
+}
 
- }
-
- /* TOP-NAV(TOPO DA PAGINA) */
+/* TOP-NAV(TOPO DA PAGINA) */
 
 .top-nav {
   width: 100%;
@@ -118,30 +117,200 @@ body {
   transform: scale(1.2);
 }
 
-
-.btn-cart::before{
-    content: attr(data-count);
-    background: var(--verde);
-    width: 17px;
-    height: 17px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    color: var(--gelo);
-    position: absolute;
-    top: 5px;
-    right: 0px;
-    margin-right: 5%;
+.btn-cart::before {
+  content: attr(data-count);
+  background: var(--verde);
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--gelo);
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  margin-right: 5%;
 }
 
-.btn-cart[data-count="0"]::before{
-    display: none;
+.btn-cart[data-count="0"]::before {
+  display: none;
 }
 
-a{
-    color: var(--color-gradient);
-    font-weight: 600;
-    text-decoration: none;
+a {
+  color: var(--color-gradient);
+  font-weight: 600;
+  text-decoration: none;
 }
+
+.busca-top {
+  padding-top: 10px;
+  background: var(--branco);
+  padding-bottom: 20px;
+  position: relative;
+  border: none;
+}
+
+.busca-topo[type="text"] {
+  width: 90%;
+  height: 45px;
+
+  border-radius: 10px;
+  margin: auto;
+  padding: 10px 20px;
+  background: var(--gelo);
+}
+
+.icone-busca {
+  position: absolute;
+  top: 0px;
+  right: 5%;
+  font-size: 27px;
+  padding: 13px;
+  cursor: pointer;
+}
+.icone-busca:active {
+  transform: scale(1.7);
+}
+
+/* ------------- page Scrollable--------------------------- */
+
+.page-content {
+  background: var(--branco);
+}
+
+ /* <!-- Swiper --> 
+.swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    */
+
+
+
+    /* =============================== */
+/*  SWIPER COM BORDA VIVA E GLOW   */
+/* =============================== */
+
+/* Container principal do Swiper */
+.swiper {
+  width: 95%;
+  max-width: 900px;
+  height: 260px;
+  margin: 25px auto;
+  border-radius: 50px;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+  z-index: 1;
+
+  /* sombra externa leve para destacar o carrossel */
+  box-shadow: 0 0 5px 5px rgba(124, 58, 237, 0.6);
+}
+
+/* === Borda viva === */
+/* Pseudo-elemento antes do Swiper cria a camada colorida */
+.swiper::before {
+  content: "";
+  position: absolute;
+  inset: -6px; /* expande um pouco pra fora (bordas externas visíveis) */
+  border-radius: 56px; /* arredondamento combinando com o swiper */
+  background: var(--color-gradient);
+  background-size: 300% 300%;
+  animation: borderFlow 6s linear infinite, glowPulse 2.5s ease-in-out infinite;
+  z-index: -1;
+
+  /* cria o brilho suave ao redor (neon effect) */
+   box-shadow:
+    0 0 25px rgba(124, 58, 237, 0.8),
+    0 0 50px rgba(168, 85, 247, 0.5),
+    0 0 80px rgba(191, 70, 239, 0.3);
+}
+/* === Animação de deslocamento do gradiente === */
+@keyframes borderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* === Animação de brilho pulsante === */
+@keyframes glowPulse {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.7);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+/* === Slides === */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  transition: transform 0.3s ease;
+}
+
+/* === Imagens === */
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px; /* acompanha a forma do swiper */
+  transition: transform 0.4s ease, filter 0.3s ease;
+  border: none;
+}
+
+/* Zoom leve ao passar o mouse */
+.swiper-slide:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* === Paginação === */
+.swiper-pagination {
+  bottom: 10px !important;
+}
+
+.swiper-pagination-bullet {
+  background: var(--color-dark-900);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-purple-100);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-purple-200);
+  opacity: 1;
+  transform: scale(1.2);
+  box-shadow: 0 0 8px var(--color-purple-100);
+}
+
