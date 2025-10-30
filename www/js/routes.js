@@ -35,6 +35,29 @@ var app = new Framework7({
           var swiper = new Swiper(".mySwiper", {
             slidesPerView: 3,
             spaceBetween: 7,
+            autoplay:true,
+            delay: 10000,
+            
+            breakpoints:{
+              50: {slidesPerView: 2,
+                spaceBetween: 7
+
+              },
+              
+                640:{slidesPerView:3,
+                  spaceBetween:7
+                },
+                992:{slidesPerView:4,
+                  spaceBetween:7
+                },
+                1200:{slidesPerView:5,
+                  spaceBetween:7
+                },
+              
+
+            },
+           
+            
             
             pagination: {
               el: ".swiper-pagination",
