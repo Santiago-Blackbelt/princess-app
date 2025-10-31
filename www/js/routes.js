@@ -64,12 +64,12 @@ var app = new Framework7({
               clickable: true,
             },*/
           });
-           var swiper = new Swiper(".colecao", {
+         /*    var swiper = new Swiper(".colecao", {
       slidesPerView: 3,
       spaceBetween: 30,
       freeMode: true,
       
-    });
+    }); */
         },
         pageBeforeRemove: function (event, page) {
           // fazer algo antes da página ser removida do DOM
