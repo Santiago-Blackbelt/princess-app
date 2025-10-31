@@ -58,12 +58,18 @@ var app = new Framework7({
             },
            
             
-            
+          /*    
             pagination: {
               el: ".swiper-pagination",
               clickable: true,
-            },
+            },*/
           });
+           var swiper = new Swiper(".colecao", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      freeMode: true,
+      
+    });
         },
         pageBeforeRemove: function (event, page) {
           // fazer algo antes da página ser removida do DOM
