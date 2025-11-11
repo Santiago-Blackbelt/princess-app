@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="lib/framework7-bundle.min.css" />
     <!-- CSS PERSONALIZADO PARA MENU-->
     <link rel="stylesheet" href="/www/css/index.css" />
+    <link rel="stylesheet" href="css/detalhes.css">
     <!--Ícones Material Design-->
     <link rel="stylesheet" href="css/materialdesignicons.min.css" />
     <!-- Remixicon -->
@@ -28,7 +29,7 @@
       <!-- Your main view, should have "view-main" class -->
       <div class="view view-main">
         <!-- TAB BAR-->
-        <div class="toolbar toolbar-bottom">
+        <div id= "menuPrincipal" class="toolbar toolbar-bottom">
           <div class="toolbar-inner">
             <a href="/index/" class="tab-link link active">
               <i class="ri-home-smile-line"></i>
@@ -51,21 +52,22 @@
 
         <!-- Initial Page, "data-name" contains page name -->
         <div data-name="index" class="page color-theme-blue">
-          <!-- NAVBAR TOPO -->
+           <!-- NAVBAR TOPO -->
           <div class="top-nav">
             <h1 class="title-logo">👑<span>Princess </span>Modas👑</h1>
             <a href="#" class="btn-cart" data-count="2">
               <i class="ri-shopping-bag-4-line"></i>
             </a>
           </div>
-          <form class="busca-top">
+          <!--  <form class="busca-top">
             <input
               type="text"
-              placeholder="Oue você procura?"
+              placeholder="Oque você procura?"
               class="busca-topo"
             />
             <i class="icone-busca ri-search-ai-line"></i>
-          </form>
+          </form>-->
+         
 
           <!-- Scrollable page content -->
           <div class="page-content">
@@ -129,21 +131,22 @@
                     <button class="filter-btn">Conjuntinhos</button>
                   </div>
                   <div class="swiper-slide-colecao">
-                    <button class="filter-btn">Verâo</button>
-                  </div>
-                  <div class="swiper-slide-colecao">
                     <button class="filter-btn">Inverno</button>
                   </div>
                   <div class="swiper-slide-colecao">
-                    <button class="filter-btn">Ofertas</button>
+                    <button class="filter-btn">Verão</button>
                   </div>
+                  <!-- 
+                  <div class="swiper-slide-colecao">
+                    <button class="filter-btn">Ofertas</button>
+                  </div> -->
                 </div>
                 <div class="swiper-pagination-colecao"></div>
               </div>
               <div id="produtos">
                 <!-- -------ITEM CARD---------- -->
                 <div class="item-card">
-                  <a href="#" class="item">
+                  <a href="/detalhes/" class="item">
                     <div class="img-container">
                       <img src="img/img11.jpg" class="img-fluid" />
                     </div>
