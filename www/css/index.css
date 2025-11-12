@@ -41,7 +41,11 @@ body {
   display: flex;
   background: var(--color-gradient);
   color: var(--color-dark-50);
-  box-shadow: 0 0 1px 1px var(--color-dark-900);
+  
+border: none;
+
+  box-shadow: 0px 0px 4px 4px rgba(124, 58, 237, 0.3);
+ 
 }
 
 .tab-link {
