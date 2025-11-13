@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3" />
+    <!-- Your app title -->
+    <title>Detalhes</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css" />
+    <!-- CSS PERSONALIZADO PARA MENU-->
+    <link rel="stylesheet" href="/www/css/index.css" />
+    <!--Ícones Material Design-->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css" />
+    <!-- Remixicon -->
+    <link rel="stylesheet" href="css/remixicon/remixiconcss.css" />
+  </head>
+
+  <body>
+    <!-- App root element -->
+    <div id="app">
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="carrinho" class="page color-theme-blue">
+          <div class="nav-top cart">
+            <a href="/index/"><i class="ri-arrow-left-circle-line"></i></a>
+            <strong><i class="ri-shopping-cart-line"></i>Carrinho</strong>
+            <a href="#" class="link popover-open" data-popover=".popover-menu">
+              <i class="ri-more-line"></i
+            ></a>
+          </div>
+
+          <div class="popover popover-menu">
+            <div class="popover-angle"></div>
+            <div class="popover-inner">
+              <div class="list">
+                <ul>
+                  <li>
+                    <a id="esvaziar" href="/#/" class="list-button popover-close"
+                      >
+                      <i class="mdi mdi-broom">Esvaziar Carrinho</i></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- TAB BAR-->
+          <div style="margin-bottom: 100px" class="toolbar toolbar-bottom">
+            <div class="toolbar-innnner">
+              <div class="sub-total">
+                <span class="span-subtotal">Subtotal:</span>
+                <span class="span-subtotal">R$:800:00</span>
+              </div>
+            </div>
+          </div>
+          <!-- TAB BAR-->
+          <div class="toolbar toolbar-bottom">
+            <div class="toolbar-innner">
+              <div class="flex-100">
+                <button class="add-cart">✨Comprar✨</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scrollable page content -->
+          <div class="page-content">
+            <div id="listacarrinho">
+              <!-- ITEM DO CARRINHO -->
+              <div class="item-carrinho">
+                <div class="area-img">
+                  <img src="img/imgdefault.png" />
+                </div>
+                <div class="area-details">
+                  <div class="sup">
+                    <span class="name-prod"> NOME DO PRODUTO </span>
+                    <a href="#" class="delete-item">
+                      <i class="mdi mdi-close"></i>
+                    </a>
+                  </div>
+                  <div class="middle">
+                    <span>DESCRIÇÃO VEM AQUI!</span>
+                  </div>
+                  <div class="preco-quantidade">
+                    <span>R$:150,00</span>
+                    <div class="count">
+                      <a href="#" class="minus">-</a>
+                      <input readonly class="qtd-item" type="text" value="1" />
+                      <a href="#" class="plus">+</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item-carrinho">
+                <div class="area-img">
+                  <img src="img/imgdefault.png" />
+                </div>
+                <div class="area-details">
+                  <div class="sup">
+                    <span class="name-prod"> NOME DO PRODUTO </span>
+                    <a href="#" class="delete-item">
+                      <i class="mdi mdi-close"></i>
+                    </a>
+                  </div>
+                  <div class="middle">
+                    <span>DESCRIÇÃO VEM AQUI!</span>
+                  </div>
+                  <div class="preco-quantidade">
+                    <span>R$:150,00</span>
+                    <div class="count">
+                      <a href="#" class="minus">-</a>
+                      <input readonly class="qtd-item" type="text" value="1" />
+                      <a href="#" class="plus">+</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
+    <!-- Roteamento do app-->
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script src="cordova.js"></script>
+  </body>
+</html>
